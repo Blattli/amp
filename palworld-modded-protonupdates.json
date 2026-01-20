@@ -10,6 +10,12 @@
     "SkipOnFailure": false
   },
   {
+      "UpdateStageName": "Create Config Directory",
+      "UpdateSourcePlatform": "All",
+      "UpdateSource": "CreateDirectory",
+      "UpdateSourceArgs": "{{$FullBaseDir}}Pal/Saved/Config/WindowsServer"
+  },
+  {
     "UpdateStageName": "SteamCMD Component Download",
     "UpdateSourcePlatform": "All",
     "UpdateSource": "SteamCMD",
