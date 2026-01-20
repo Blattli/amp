@@ -1,0 +1,84 @@
+Meta.DisplayName=Palworld Modded Proton
+Meta.Description=Chilled Custom Modded Server
+Meta.Arch=x86_64
+Meta.Author=Stein - Made with AMP Config Generator
+Meta.URL=https://www.pocketpair.jp/palworld
+Meta.MinAMPVersion=2.4.6.6
+Meta.SpecificDockerImage=cubecoders/ampbase:xvfb
+Meta.DockerRequired=False
+Meta.ContainerPolicy=Supported
+Meta.ContainerPolicyReason=
+Meta.Prerequsites=[]
+Meta.EndpointURIFormat=steam://connect/{ip}:{GenericModule.App.Ports.$SteamQueryPort}
+Meta.AppConfigId=dbd11555-f31b-4e4c-aefa-001cdad048c2
+App.AdminMethod=STDIO
+App.HasReadableConsole=true
+App.HasWritableConsole=true
+App.DisplayName=Palworld Modded Proton
+App.CommandLineArgs={{$PlatformArgs}} Pal {{CommunityServer}}-Port={{$GamePort}} -QueryPort={{$QueryPort}} -RCONPort={{$RCONPort}} -MultiHome={{$ApplicationIPBinding}} -publicport={{$GamePort}} -publicip={{PublicIP}} -players={{$MaxUsers}} {{MultiThread}}{{$FormattedArgs}} {{CustomArgs}} -stdout -FullStdOutLogOutput
+App.WindowsCommandLineArgs=
+App.CommandLineParameterFormat=-{0}={1}
+App.CommandLineParameterDelimiter= 
+App.RapidStartup=false
+App.ApplicationReadyMode=Immediate
+App.ExitMethod=OS_CLOSE
+App.ExitString=stop
+App.ExitTimeout=30
+App.ExitFile=app_exit.lck
+App.SupportsLiveSettingsChanges=False
+App.LiveSettingChangeCommandFormat=set {0} "{1}"
+App.ApplicationIPBinding=0.0.0.0
+App.AdminPortRef=RemoteAdminPort
+App.UniversalSleepApplicationUDPPortRef=GamePort1
+App.PrimaryApplicationPortRef=GamePort1
+App.UniversalSleepSteamQueryPortRef=SteamQueryPort
+App.MaxUsers=32
+App.UseRandomAdminPassword=True
+App.RemoteAdminPassword=
+App.AdminLoginTransform=None
+App.RCONConnectDelaySeconds=30
+App.RCONConnectRetrySeconds=15
+App.RCONHeartbeatCommand=ping
+App.RCONHeartbeatMinutes=0
+App.TelnetLoginFormat={0}
+App.SteamUpdateAnonymousLogin=True
+App.SteamForceLoginPrompt=False
+App.SupportsUniversalSleep=False
+App.WakeupMode=Any
+App.TemplateMatchRegex={{(\$?[\w]+)}}
+App.MonitorChildProcess=True
+App.MonitorChildProcessWaitMs=5000
+App.MonitorChildProcessName=^Z:\\.*PalServer-Win64-Shipping-Cmd.exe.*-Port={{$GamePort}}.*$
+App.Compatibility=None
+App.SteamWorkshopDownloadLocation={{$FullBaseDir}}Mods/Workshop
+Console.FilterMatchRegex=(Setting breakpad minidump AppID = 1623730|\[S_API FAIL\] Tried to access Steam interface .* before SteamAPI_Init succeeded\.|Pong)
+Console.FilterMatchReplacement=
+Console.ThrowawayMessageRegex=^(WARNING|ERROR): Shader.+$
+Console.UpdateAvailableRegex=^\[\d\d:\d\d:\d\d\] \[INFO\] A new server update is available! v[\d\.]+.$
+Console.SuppressLogAtStart=False
+Console.ActivateLogRegex=
+Console.UserActions={}
+Console.SleepMode=False
+Console.SleepOnStart=False
+Console.SleepDelayMinutes=5
+Console.DozeDelay=2
+Console.AutoRetryCount=2
+Console.SleepStartThresholdSeconds=25
+Console.AppReadyRegex=^.*Running Palworld dedicated server on :\d+$
+Console.UserJoinRegex=^(?:\[[\d-]+ [\d:]+\] \[LOG\] )?(?<username>.+) joined the server\. \(User id: (?<userid>.+?)\)|(?:\[[\d:]+\]\s?\[info\] )?'(?<username>.+)' \(UserId=(?<userid>.+?)(, IP=(?<endpoint>.+?))?\) has logged in\.$
+Console.UserLeaveRegex=^(?:\[[\d-]+ [\d:]+\] \[LOG\] )?(?<username>.+) left the server\. \(User id: (?<userid>.+?)\)|(?:\[[\d:]+\]\s?\[info\] )?'(?<username>.+)' \(UserId=(?<userid>.+?)(, IP=(?<endpoint>.+?))?\) has logged out\.$
+Console.UserChatRegex=^$
+Meta.OS=2
+Meta.ConfigManifest=palworld-modded-protonconfig.json
+Meta.MetaConfigManifest=palworld-modded-protonmetaconfig.json
+Meta.ConfigRoot=palworld-modded-proton.kvp
+App.RootDir=./palworld-modded-proton/
+Meta.DisplayImageSource=steam:1623730
+App.BaseDirectory=./palworld-modded-proton/2394010/
+App.WorkingDir=2394010
+App.ExecutableWin=2394010\Pal\Binaries\Win64\PalServer-Win64-Shipping-Cmd.exe
+App.ExecutableLinux=/usr/bin/xvfb-run
+App.LinuxCommandLineArgs="./Pal/Binaries/Win64/PalServer-Win64-Shipping-Cmd.exe"
+App.Ports=@IncludeJson[palworld-modded-protonports.json]
+App.UpdateSources=@IncludeJson[palworld-modded-protonupdates.json]
+App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullBaseDir}}linux64:{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"1623730","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all","WINEDLLOVERRIDES":"d3d9,dwmapi.dll=n,b","XDG_RUNTIME_DIR":"/tmp"}
