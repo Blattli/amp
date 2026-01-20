@@ -4,7 +4,7 @@
       "UpdateSourcePlatform": "All",
       "UpdateSource": "SteamCMD",
       "UpdateSourceData": "2394010",
-      "UpdateSourceArgs": "1623730",
+      "UpdateSourceArgs": "",
       "ForceDownloadPlatform": "Windows",
       "UpdateSourceVersion": "public",
       "SkipOnFailure": false
@@ -13,8 +13,8 @@
       "UpdateStageName": "SteamCMD Component Download",
       "UpdateSourcePlatform": "All",
       "UpdateSource": "SteamCMD",
-      "UpdateSourceData": "1007",
-      "UpdateSourceArgs": "1623730",
+      "UpdateSourceData": "1070560",
+      "UpdateSourceArgs": "",
       "UpdateSourceTarget": "2394010/Pal/Binaries/Win64",
       "ForceDownloadPlatform": "Windows",
       "SkipOnFailure": false
