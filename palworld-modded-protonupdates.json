@@ -4,7 +4,7 @@
     "UpdateSourcePlatform": "All",
     "UpdateSource": "SteamCMD",
     "UpdateSourceData": "2394010",
-    "UpdateSourceArgs": "",
+    "UpdateSourceArgs": "+app_info_update 1",
     "UpdateSourceVersion": "",
     "ForceDownloadPlatform": "Windows",
     "SkipOnFailure": false
