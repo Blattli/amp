@@ -1,24 +1,24 @@
 [
  {
-      "UpdateStageName": "SteamCMD Download",
-      "UpdateSourcePlatform": "All",
-      "UpdateSource": "SteamCMD",
-      "UpdateSourceData": "2394010",
-      "UpdateSourceArgs": "",
-      "ForceDownloadPlatform": "Windows",
-      "UpdateSourceVersion": "public",
-      "SkipOnFailure": false
-  },
-  {
-      "UpdateStageName": "SteamCMD Component Download",
-      "UpdateSourcePlatform": "All",
-      "UpdateSource": "SteamCMD",
-      "UpdateSourceData": "1070560",
-      "UpdateSourceArgs": "",
-      "UpdateSourceTarget": "2394010/Pal/Binaries/Win64",
-      "ForceDownloadPlatform": "Windows",
-      "SkipOnFailure": false
-  },
+       "UpdateStageName": "SteamCMD Download",
+       "UpdateSourcePlatform": "All",
+       "UpdateSource": "SteamCMD",
+       "UpdateSourceData": "2394010",
+       "UpdateSourceArgs": "1623730",
+       "ForceDownloadPlatform": "Windows",
+       "UpdateSourceVersion": "public",
+       "SkipOnFailure": false
+   },
+   {
+       "UpdateStageName": "SteamCMD Component Download",
+       "UpdateSourcePlatform": "All",
+       "UpdateSource": "SteamCMD",
+       "UpdateSourceData": "1007",
+       "UpdateSourceArgs": "1623730",
+       "UpdateSourceTarget": "2394010/Pal/Binaries/Win64",
+       "ForceDownloadPlatform": "Windows",
+       "SkipOnFailure": false
+   },
   {
       "UpdateStageName": "Config Template Download",
       "UpdateSourcePlatform": "All",
