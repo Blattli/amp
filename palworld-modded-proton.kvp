@@ -21,10 +21,9 @@ App.CommandLineParameterFormat=-{0}={1}
 App.CommandLineParameterDelimiter= 
 App.RapidStartup=false
 App.ApplicationReadyMode=Immediate
-App.ExitMethod=String
-App.ExitMethodWindows=None
+App.ExitMethod=OS_CLOSE
 App.ExitTimeout=30
-App.ExitString=DSServerShutdown
+App.ExitString=DoExit
 App.ExitFile=app_exit.lck
 App.SupportsLiveSettingsChanges=False
 App.LiveSettingChangeCommandFormat=set {0} "{1}"
