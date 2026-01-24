@@ -3,7 +3,7 @@
     "ConfigFile": "Pal/Saved/Config/WindowsServer/PalWorldSettings.ini",
     "AutoMap": true,
     "ConfigType": "template",
-    "ConfigFileTemplate": "palworld/AMP_PalWorldSettings.ini"
+    "ConfigFileTemplate": "palworld-modded-proton/AMP_PalWorldSettings.ini"
   },
   {
     "ConfigFile": "Pal/Binaries/Win64/ue4ss/UE4SS-settings.ini",
