@@ -11,19 +11,5 @@
     "AutoMap": true,
     "ConfigFormat": "{0} = {1}",
     "ConfigFormatRegex": "^(?<key>.+?)\\s*=\\s*(?<value>.*?)$"
-  },
-  {
-    "ConfigFile": "Mods/PalModSettings.ini",
-    "ConfigType": "ini",
-    "ConfigFormat": "{0}{1}",
-    "Subsections": [
-      {
-        "Heading": "PalModSettings",
-        "SettingMappings": {
-          "bGlobalEnableMod=": "bGlobalEnableMod",
-          "": "ActiveModList"
-        }
-      }
-    ]
   }
 ]
