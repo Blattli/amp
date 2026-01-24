@@ -23,7 +23,7 @@ App.RapidStartup=false
 App.ApplicationReadyMode=Immediate
 App.ExitMethod=OS_CLOSE
 App.ExitTimeout=30
-App.ExitString=
+App.ExitString=DoExit
 App.ExitFile=app_exit.lck
 App.SupportsLiveSettingsChanges=False
 App.LiveSettingChangeCommandFormat=set {0} "{1}"
@@ -49,8 +49,7 @@ App.TemplateMatchRegex={{(\$?[\w]+)}}
 App.MonitorChildProcess=True
 App.MonitorChildProcessWaitMs=5000
 App.MonitorDirectChildOnly=False
-App.DumpFullChildProcessTree=True
-App.MonitorChildProcessName=^.*PalServer-Win64-Shipping-Cmd\.exe.*-Port={{$GamePort}}.*$
+App.MonitorChildProcessName=^.*{{$WineBaseDir}}Pal\\Binaries\\Win64\\PalServer-Win64-Shipping-Cmd\.exe.*Port={{$GamePort}}.*$
 App.Compatibility=None
 App.SteamWorkshopDownloadLocation={{$FullBaseDir}}Mods/Workshop
 Console.FilterMatchRegex=(Setting breakpad minidump AppID = 1623730|\[S_API FAIL\] Tried to access Steam interface .* before SteamAPI_Init succeeded\.|Pong)
