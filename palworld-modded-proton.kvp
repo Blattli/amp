@@ -81,4 +81,4 @@ App.ExecutableLinux=/usr/bin/xvfb-run
 App.LinuxCommandLineArgs=-a -n 99 "{{$FullRootDir}}.proton/proton" runinprefix "{{$FullBaseDir}}Pal/Binaries/Win64/PalServer-Win64-Shipping-Cmd.exe"
 App.Ports=@IncludeJson[palworld-modded-protonports.json]
 App.UpdateSources=@IncludeJson[palworld-modded-protonupdates.json]
-App.EnvironmentVariables={"SteamAppId":"2394010","STEAM_COMPAT_DATA_PATH":"{{$FullRootDir}}.proton/compatdata","STEAM_COMPAT_CLIENT_INSTALL_PATH":"{{$FullBaseDir}}.steam/steam","HOME":"{{$FullBaseDir}}","XDG_RUNTIME_DIR":"/tmp"}
+App.EnvironmentVariables={"SteamAppId":"1623730","STEAM_COMPAT_DATA_PATH":"{{$FullRootDir}}.proton/compatdata","STEAM_COMPAT_CLIENT_INSTALL_PATH":"{{$FullBaseDir}}.steam/steam","HOME":"{{$FullBaseDir}}","XDG_RUNTIME_DIR":"/tmp"}
