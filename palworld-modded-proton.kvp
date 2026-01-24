@@ -15,13 +15,13 @@ App.AdminMethod=STDIO
 App.HasReadableConsole=true
 App.HasWritableConsole=true
 App.DisplayName=Palworld Modded Proton
-App.CommandLineArgs={{$PlatformArgs}} Pal {{CommunityServer}}-Port={{$GamePort}} -QueryPort={{$QueryPort}} -RCONPort={{$RCONPort}} -MultiHome={{$ApplicationIPBinding}} -publicport={{$GamePort}} -publicip={{PublicIP}} -players={{$MaxUsers}} {{MultiThread}}{{$FormattedArgs}} {{CustomArgs}} -stdout -FullStdOutLogOutput
+App.CommandLineArgs={{$PlatformArgs}} Pal -NullRHI {{CommunityServer}}-Port={{$GamePort}} -QueryPort={{$QueryPort}} -RCONPort={{$RCONPort}} -MultiHome={{$ApplicationIPBinding}} -publicport={{$GamePort}} -publicip={{PublicIP}} -players={{$MaxUsers}} {{MultiThread}}{{$FormattedArgs}} {{CustomArgs}} -stdout -FullStdOutLogOutput
 App.WindowsCommandLineArgs=
 App.CommandLineParameterFormat=-{0}={1}
 App.CommandLineParameterDelimiter= 
 App.RapidStartup=false
 App.ApplicationReadyMode=Immediate
-App.ExitMethod=OS_CLOSE
+App.ExitMethod=DoExit
 App.ExitString=stop
 App.ExitTimeout=30
 App.ExitFile=app_exit.lck
@@ -41,14 +41,14 @@ App.RCONConnectRetrySeconds=15
 App.RCONHeartbeatCommand=ping
 App.RCONHeartbeatMinutes=0
 App.TelnetLoginFormat={0}
-App.SteamUpdateAnonymousLogin=False
+App.SteamUpdateAnonymousLogin=True
 App.SteamForceLoginPrompt=False
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
 App.TemplateMatchRegex={{(\$?[\w]+)}}
 App.MonitorChildProcess=True
 App.MonitorChildProcessWaitMs=5000
-App.MonitorChildProcessName=^Z:\\.*PalServer-Win64-Shipping-Cmd.exe.*-Port={{$GamePort}}.*$
+App.MonitorChildProcessName=^.*PalServer-Win64-Shipping-Cmd\.exe.*-Port={{$GamePort}}.*$
 App.Compatibility=None
 App.SteamWorkshopDownloadLocation={{$FullBaseDir}}Mods/Workshop
 Console.FilterMatchRegex=(Setting breakpad minidump AppID = 1623730|\[S_API FAIL\] Tried to access Steam interface .* before SteamAPI_Init succeeded\.|Pong)
@@ -78,7 +78,7 @@ App.BaseDirectory=./palworld-modded-proton/2394010/
 App.WorkingDir=2394010
 App.ExecutableWin=Pal\Binaries\Win64\PalServer-Win64-Shipping-Cmd.exe
 App.ExecutableLinux=/usr/bin/xvfb-run
-App.LinuxCommandLineArgs=-a "{{$FullRootDir}}1580130/proton" run "./Pal/Binaries/Win64/PalServer-Win64-Shipping-Cmd.exe"
+App.LinuxCommandLineArgs=-a -n 99 "{{$FullRootDir}}.proton/proton" runinprefix "{{$FullBaseDir}}Pal/Binaries/Win64/PalServer-Win64-Shipping-Cmd.exe"
 App.Ports=@IncludeJson[palworld-modded-protonports.json]
 App.UpdateSources=@IncludeJson[palworld-modded-protonupdates.json]
-App.EnvironmentVariables={"LD_LIBRARY_PATH": "{{$FullBaseDir}}linux64:{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%", "SteamAppId": "2394010", "STEAM_COMPAT_DATA_PATH": "{{$FullRootDir}}1580130", "STEAM_COMPAT_CLIENT_INSTALL_PATH": "{{$FullRootDir}}1580130"}
+App.EnvironmentVariables={"SteamAppId":"2394010","STEAM_COMPAT_DATA_PATH":"{{$FullRootDir}}.proton/compatdata","STEAM_COMPAT_CLIENT_INSTALL_PATH":"{{$FullBaseDir}}.steam/steam","HOME":"{{$FullBaseDir}}","XDG_RUNTIME_DIR":"/tmp"}
