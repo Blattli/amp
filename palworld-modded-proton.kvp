@@ -19,8 +19,8 @@ App.CommandLineArgs={{$PlatformArgs}} Pal {{CommunityServer}}-Port={{$GamePort}}
 App.WindowsCommandLineArgs=
 App.CommandLineParameterFormat=-{0}={1}
 App.CommandLineParameterDelimiter= 
-App.RapidStartup=false
-App.ApplicationReadyMode=Immediate
+App.RapidStartup=False
+App.ApplicationReadyMode=RCONConnected
 App.ExitMethod=String
 App.ExitString=Shutdown 2 Herunterfahren...
 App.ExitTimeout=30
