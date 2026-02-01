@@ -75,7 +75,7 @@ Meta.ConfigManifest=palworld-modded-protonconfig.json
 Meta.MetaConfigManifest=palworld-modded-protonmetaconfig.json
 Meta.ConfigRoot=palworld-modded-proton.kvp
 App.RootDir=./palworld-modded-proton/
-Meta.DisplayImageSource=steam:1623730
+Meta.DisplayImageSource=https://cdn.discordapp.com/attachments/1217145654648901722/1459815221139869706/124D0A0D-8F96-423D-878A-12BF7F63E53A.png?ex=698055de&is=697f045e&hm=1df54f1153279b430ce0b1bb86390f3d12775dcc486e22391f2441331be82208&
 App.BaseDirectory=./palworld-modded-proton/2394010/
 App.WorkingDir=2394010
 App.ExecutableWin=2394010\Pal\Binaries\Win64\PalServer-Win64-Shipping-Cmd.exe
