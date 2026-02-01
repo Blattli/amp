@@ -21,9 +21,9 @@ App.CommandLineParameterFormat=-{0}={1}
 App.CommandLineParameterDelimiter= 
 App.RapidStartup=false
 App.ApplicationReadyMode=Immediate
-App.ExitMethod=OS_CLOSE
-App.ExitTimeout=30
-App.ExitString=DoExit
+App.ExitMethod=String
+App.ExitString=Shutdown 30 Server shutting down in 30 seconds
+App.ExitTimeout=60
 App.ExitFile=app_exit.lck
 App.SupportsLiveSettingsChanges=False
 App.LiveSettingChangeCommandFormat=set {0} "{1}"
